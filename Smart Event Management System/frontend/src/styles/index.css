@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1A1A2E;
+    background-color: #F8F9FA;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#E8441A] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:bg-[#C73A15] hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply bg-[#1A1A2E] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:bg-[#2a2a4e] hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply border-2 border-[#E8441A] text-[#E8441A] px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:bg-[#E8441A] hover:text-white hover:scale-105 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply text-[#6B7280] px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:bg-gray-100 hover:text-[#1A1A2E] active:scale-95;
+  }
+
+  .btn-danger {
+    @apply bg-[#EF4444] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:bg-red-600 hover:scale-105 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-md p-6;
+  }
+
+  .card-hover {
+    @apply bg-white rounded-2xl shadow-md p-6 transition-all duration-200 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#E8441A] focus:border-transparent transition-all duration-200 text-[#1A1A2E] placeholder-gray-400 bg-white;
+  }
+
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-[#1A1A2E] tracking-tight;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #E8441A #F3F4F6;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #F3F4F6;
+    border-radius: 10px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #E8441A;
+    border-radius: 10px;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #E8441A 0%, #F5A623 100%);
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, #1A1A2E 0%, #2d2d5e 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #E8441A, #F5A623);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Fix html5-qrcode video visibility */
+#qr-reader {
+  width: 100% !important;
+  border: none !important;
+}
+
+#qr-reader video {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 250px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+#qr-reader canvas {
+  display: none !important;
+}
+
+/* Hide the html5-qrcode default toolbar/header */
+#qr-reader__header_message {
+  display: none !important;
+}
+
+#qr-reader__dashboard_section_csr span {
+  display: none !important;
+}
+
+#qr-reader__dashboard {
+  display: none !important;
+}
+
+#qr-reader__status_span {
+  display: none !important;
+}
+
+/* Remove the default border injected by html5-qrcode */
+#qr-reader > div {
+  border: none !important;
+  padding: 0 !important;
+}
