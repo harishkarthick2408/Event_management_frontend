@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://event-management-backend-x0dp.onrender.com';
 
 const mapApiEventToUi = (e) => {
   const start = e.startTime ? new Date(e.startTime) : null;

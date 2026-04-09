@@ -13,7 +13,7 @@ import Input from '../../components/ui/Input';
 import Card from '../../components/ui/Card';
 import { paymentService } from '../../services/paymentService';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://event-management-backend-x0dp.onrender.com';
 
 const createBackendTicket = async ({ eventId, attendeeName, attendeeEmail, ticketType }) => {
   const token = localStorage.getItem('eventpro_token');
